@@ -38,5 +38,8 @@
 ```
 可以看到这里定义的全局变量和input元素中的name属性对应的值一致，因此在handleUpdate函数中就可以通过获取input元素新的name属性值和value属性值对CSS样式进行更新。
 ```javascript
-
+function handleUpdate() {
+      const suffix = this.dataset.sizing || '';
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
 ```
