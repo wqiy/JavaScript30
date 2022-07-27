@@ -12,7 +12,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 ctx.strokeStyle = '#BADA55';
-ctx.lineJoin = 'round';
+ctx.lineJoin = 'miter';
 ctx.lineCap = 'round';
 ctx.lineWidth = 100;
 // ctx.globalCompositeOperation = 'multiply';
@@ -35,6 +35,7 @@ function draw(e) {
   ctx.stroke();
   [lastX, lastY] = [e.offsetX, e.offsetY];
 
+// hue = Math.floor(Math.random() * 360);
   hue++;
   if (hue >= 360) {
     hue = 0;
